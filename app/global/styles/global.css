@@ -1,0 +1,39 @@
+@import "reset.css" layer(reset);
+@import "variables/variables.css";
+@import "utils.css" layer(utils);
+
+@layer reset, global, utils;
+
+@layer global {
+    :root {
+        font-family: "Noto Sans", system-ui, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 500;
+        font-size: var(--base-font-size);
+
+        color-scheme: dark light;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        padding-block-start: var(--nav-height);
+    }
+
+    h1 {
+        font-size: calc(var(--base-font-size) * 2);
+        letter-spacing: 0;
+        line-height: calc(var(--base-font-size) * 3.5);
+        font-weight: 900;
+        padding-block-end: 2rem;
+    }
+
+    p {
+        font-size: calc(var(--base-font-size) * 1.125);
+        line-height: 1.5;
+        padding-block-end: 1rem;
+    }
+}

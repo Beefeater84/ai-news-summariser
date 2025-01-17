@@ -1,0 +1,20 @@
+:root {
+    --text-color: #f8f9fa;
+    --primary-color: #29ccde;
+    --background-color: #1f2123;
+
+    --text-color-dark: #131415;
+    --border-color: #ffffff21;
+    --highlight-color: #fdffa0;
+    --overlay-color: #ffffff2b;
+
+    --base-font-size: 16px;
+    --nav-li-size: 16px;
+
+
+    --nav-height: calc(var(--nav-li-size) * 3.5);
+
+    --block-border-buttom: inset 0 calc(var(--nav-li-size) * -0.0625) 0 var(--border-color);
+
+    --container-width: 1080px;
+}
