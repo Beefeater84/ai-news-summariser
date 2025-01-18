@@ -1,12 +1,14 @@
 @import "reset.css" layer(reset);
+@import "variables/primitives.css";
 @import "variables/variables.css";
 @import "utils.css" layer(utils);
+@import "tailwind.css" layer(tailwind);
 
-@layer reset, global, utils;
+@layer reset, tailwind, global, utils;
 
 @layer global {
     :root {
-        font-family: "Noto Sans", system-ui, Helvetica, Arial, sans-serif;
+        font-family: var(--nanoSanse), sans-serif;
         line-height: 1.5;
         font-weight: 500;
         font-size: var(--base-font-size);
@@ -29,11 +31,16 @@
         line-height: calc(var(--base-font-size) * 3.5);
         font-weight: 900;
         padding-block-end: 2rem;
-    }
+      }
 
     p {
         font-size: calc(var(--base-font-size) * 1.125);
         line-height: 1.5;
         padding-block-end: 1rem;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
     }
 }

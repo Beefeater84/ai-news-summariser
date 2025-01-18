@@ -1,20 +1,28 @@
 :root {
-    --text-color: #f8f9fa;
-    --primary-color: #29ccde;
-    --background-color: #1f2123;
 
-    --text-color-dark: #131415;
-    --border-color: #ffffff21;
-    --highlight-color: #fdffa0;
-    --overlay-color: #ffffff2b;
+    --text-color: var(--white-100);
 
-    --base-font-size: 16px;
-    --nav-li-size: 16px;
+    --primary-color: var(--blue-100);
+    --background-color: var(--grey-500);
+
+    --text-color-dark: var(--black-100);
+    --border-color: var(--grey-300);
+    --highlight-color: var(--yellow-100);
+    --overlay-color: var(--grey-200);
+
+    --base-font-size: var(--size-16px);
+    --nav-li-size: var(--size-16px);
 
 
+    /* Sizes */
     --nav-height: calc(var(--nav-li-size) * 3.5);
-
     --block-border-buttom: inset 0 calc(var(--nav-li-size) * -0.0625) 0 var(--border-color);
 
-    --container-width: 1080px;
+    --container-width: var(--size-1080px);
+    --inline-full-size: var(--size-100prs);
+
+    /* Z-index */
+    /* Fonts */
+
+    --nanoSanse: "Noto Sans", system-ui, sans-serif;
 }

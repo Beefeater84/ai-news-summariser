@@ -1,5 +1,5 @@
 {
-  "name": "shulman-ai",
+  "name": "news-ai-summarizer",
   "private": true,
   "type": "module",
   "scripts": {
