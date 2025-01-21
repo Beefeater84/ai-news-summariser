@@ -4,7 +4,7 @@
 @import "utils.css" layer(utils);
 @import "tailwind.css" layer(tailwind);
 
-@layer reset, tailwind, global, utils;
+@layer reset, tailwind, global, utils, ui;
 
 @layer global {
     :root {
@@ -32,6 +32,22 @@
         font-weight: 900;
         padding-block-end: 2rem;
       }
+
+    h2 {
+        font-size: calc(var(--base-font-size) * 1.75);
+        letter-spacing: 0;
+        line-height: calc(var(--base-font-size) * 2.5);
+        font-weight: 700;
+        padding-block-end: 1.5rem;
+    }
+
+    h3 {
+        font-size: calc(var(--base-font-size) * 1.5);
+        letter-spacing: 0;
+        line-height: calc(var(--base-font-size) * 2);
+        font-weight: 600;
+        padding-block-end: 1.25rem;
+    }
 
     p {
         font-size: calc(var(--base-font-size) * 1.125);

@@ -1,4 +1,4 @@
-import { ArticleList } from "./ui/article-list";
+import {ArticleList} from "./ui/article-list";
 import type {Route} from "@router/types/app/+types/root";
 
 export function meta({}: Route.MetaArgs) {

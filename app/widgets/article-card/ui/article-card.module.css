@@ -1,0 +1,44 @@
+@layer ui {
+    .article {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+        grid-template-areas:
+                "image"
+                "content";
+
+        @media (min-width: 768px) {
+            grid-template-columns: fit-content(500px) 1fr;
+            grid-template-areas:
+                "image content";
+        }
+
+        background-color: var(--article-background-color);
+        border-radius: 4px;
+        overflow: clip;
+    }
+
+    .title {
+        font-size: var(--article-title);
+        letter-spacing: 0;
+        line-height: 3.5rem;
+        font-weight: 900;
+        padding-block-end: 2rem;
+    }
+
+    .content {
+        grid-area: content;
+        padding-inline: 2rem;
+
+        @media (min-width: 768px) {
+            padding-inline: 0;
+        }
+    }
+
+    .image {
+        grid-area: image;
+    }
+
+}
+

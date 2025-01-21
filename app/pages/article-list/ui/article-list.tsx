@@ -1,40 +1,129 @@
-const article_list = [
+import styles from "./article-list.module.css";
+import {ArticleCard} from "@/widgets/article-card";
+import type {IArticleCard} from "@/entities/article";
+
+const articles: IArticleCard[] = [
     {
-        title: "Dominique Pelicot'n tytär: Isäni",
-        category: "Kotimaa",
-        date: "2022-02-17",
-        image:
-            "https://images.cdn.yle.fi/image/upload/c_crop,h_550,w_977,x_0,y_0/ar_1.7777777777777777,c_fill,g_faces,h_357,w_636/dpr_1.0/q_auto:eco/f_auto/fl_lossy/v1446461369/17-3699956373f64662d7",
+        id: "1",
+        type: "article",
+        title: "Breaking News: Market Hits Record Highs",
+        date: "2025-01-20",
+        publishedAt: new Date("2025-01-20T18:25:00Z"),
+        tags: ["Youth"],
+        image: {
+            id: "img1",
+            src: "https://images.cdn.yle.fi/image/upload/c_crop,x_0,y_0,w_6985,h_3929/w_352,h_198,ar_1.7777777777777777,dpr_2,c_fill/q_auto:eco,f_auto,fl_lossy/v1715760592/39-1281890663b3715d1883",
+            alt: "Stock market graph",
+            copyright: null,
+            blurhash: null
+        },
+        author: {
+            id: "author1",
+            name: "John Doe",
+            avatar: "https://example.com/johndoe.jpg",
+            title: "Senior Financial Analyst"
+        },
+        commentsCount: 136,
+
     },
     {
-        title: "Police remove Finns Party MP from Finnair flight",
-        category: "Transport",
-        image:
-            "https://images.cdn.yle.fi/image/upload/ar_1.400262123197903,c_fill,g_faces,h_454,w_636/dpr_1.0/q_auto:eco/f_auto/fl_lossy/v1736678855/39-140534167839da0445a9",
-        date: "2022-02-17",
+        id: "2",
+        type: "article",
+        title: "Tech Giants Announce New Innovations",
+        date: "2025-01-19",
+        publishedAt: new Date("2025-01-19T15:30:00Z"),
+        tags: ["technology", "innovation"],
+        image: {
+            id: "img2",
+            src: "https://images.cdn.yle.fi/image/upload/c_crop,x_0,y_0,w_3972,h_2234/w_736,h_414,ar_1.7777777777777777,dpr_2,c_fill/q_auto:eco,f_auto,fl_lossy/v1737429053/39-1409195678f0fb5868a6",
+            alt: "Tech innovations",
+            copyright: null,
+            blurhash: null
+        },
+        author: {
+            id: "author2",
+            name: "Jane Smith",
+            avatar: "https://example.com/janesmith.jpg",
+            title: "Tech Reporter"
+        }
     },
     {
-        title:
-            "Nato deploys ships to patrol the Baltic; 3 Swedish vessels to join operation",
-        category: "Security",
-        image:
-            "https://images.cdn.yle.fi/image/upload/c_crop,x_1316,y_0,w_3413,h_3413/w_235,h_235,ar_1,c_fill/q_auto:eco,f_auto,fl_lossy/v1734778250/39-139922267669d464f938",
-        date: "2025-01-12T18:00:58+0200",
+        id: "3",
+        type: "article",
+        title: "Global Climate Change Conference 2025",
+        date: "2025-01-18",
+        publishedAt: new Date("2025-01-18T09:00:00Z"),
+        tags: ["climate", "conference"],
+        image: {
+            id: "img3",
+            src: "https://example.com/climate.jpg",
+            alt: "Climate change conference",
+            copyright: null,
+            blurhash: null
+        },
+        author: {
+            id: "author3",
+            name: "Alice Johnson",
+            avatar: "https://example.com/alicejohnson.jpg",
+            title: "Environmental Journalist"
+        }
     },
+    {
+        id: "4",
+        type: "article",
+        title: "New Study Reveals Health Benefits of Meditation",
+        date: "2025-01-17",
+        publishedAt: new Date("2025-01-17T12:00:00Z"),
+        tags: ["health", "meditation"],
+        image: {
+            id: "img4",
+            src: "https://example.com/meditation.jpg",
+            alt: "Meditation",
+            copyright: null,
+            blurhash: null
+        },
+        author: {
+            id: "author4",
+            name: "Michael Brown",
+            avatar: "https://example.com/michaelbrown.jpg",
+            title: "Health Correspondent"
+        }
+    },
+    {
+        id: "5",
+        type: "article",
+        title: "Exploring the Wonders of the Universe",
+        date: "2025-01-16",
+        publishedAt: new Date("2025-01-16T18:00:00Z"),
+        tags: ["space", "universe"],
+        image: {
+            id: "img5",
+            src: "https://example.com/universe.jpg",
+            alt: "Universe",
+            copyright: null,
+            blurhash: null
+        },
+        author: {
+            id: "author5",
+            name: "Emily White",
+            avatar: "https://example.com/emilywhite.jpg",
+            title: "Science Writer"
+        }
+    }
 ];
 
 export const ArticleList = () => {
     return (
         <section className="container">
             <h1>Article List</h1>
-            {article_list.map((article, index) => (
-                <div key={index}>
-                    <h2>{article.title}</h2>
-                    <p>{article.category}</p>
-                    <p>{article.date}</p>
-                    <img src={article.image} alt={article.title}/>
-                </div>
-            ))}
+            <section className={styles.list}>
+                {articles.map((article) =>
+                    <ArticleCard
+                        key={article.id}
+                        {...article}
+                    />)}
+            </section>
+
         </section>
     );
 };

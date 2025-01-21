@@ -9,36 +9,38 @@
     align-items: center;
     z-index: 1000;
     justify-content: center;
+    padding-inline: 1rem;
 
 
     background-color: var(--background-color);
     box-shadow: var(--block-border-buttom);
 
 
-    :global(nav),
-    :global(div){
-        height: var(--nav-height);
-    }
+    /*:global(nav),*/
+    /*:global(div) {*/
+    /*    height: var(--nav-height);*/
+    /*}*/
 
 }
 
-.container{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    height: var(--nav-height);
-
-    width: 100%;
-    max-width: var(--container-width);
-
-}
-
-.logo{
-    height: var(--nav-height);
-    display: flex;
+.container {
+    display: grid;
     align-items: center;
+    justify-content: center;
+    grid-template-columns: 3rem 1rem max-content;
+    gap: 1rem;
+    /*align-content: center;*/
+    /*justify-content: center;*/
+    height: var(--nav-height);
 
-    padding-inline-end: 1rem;
+    width: var(--container-width);
+    max-width: 100%;
+
+}
+
+.logo {
+    /*height: var(--nav-height);*/
+    /*padding-inline-end: 1rem;*/
 }
 
 .mainMenu {
@@ -71,5 +73,5 @@
     height: calc(var(--base-font-size) * 1.625);
     width: 2px;
     background-color: var(--border-color);
-    margin-inline-start: var(--base-font-size);
+    /*margin-inline-start: var(--base-font-size);*/
 }

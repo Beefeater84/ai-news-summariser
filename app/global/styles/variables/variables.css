@@ -13,10 +13,13 @@
     --base-font-size: var(--size-16px);
     --nav-li-size: var(--size-16px);
 
+    --article-background-color: var(--grey-500);
+
 
     /* Sizes */
     --nav-height: calc(var(--nav-li-size) * 3.5);
     --block-border-buttom: inset 0 calc(var(--nav-li-size) * -0.0625) 0 var(--border-color);
+
 
     --container-width: var(--size-1080px);
     --inline-full-size: var(--size-100prs);
@@ -25,4 +28,8 @@
     /* Fonts */
 
     --nanoSanse: "Noto Sans", system-ui, sans-serif;
+
+    /* Sizes */
+    --article-list-gap: calc(var(--base-font-size) * 2);
+    --article-title: calc(var(--base-font-size) * 1.3);
 }
