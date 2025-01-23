@@ -30,7 +30,7 @@
         letter-spacing: 0;
         line-height: calc(var(--base-font-size) * 3.5);
         font-weight: 900;
-        padding-block-end: 2rem;
+        padding-block-end: 1em;
       }
 
     h2 {
