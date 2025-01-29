@@ -32,11 +32,19 @@
     padding-block: 0 1rem;
     max-width: 75ch;
 
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: 50em) {
-        padding-inline: 0;
+        padding-inline-end: 2rem;
+        padding-inline-start: 0;
         padding-block: 1rem;
     }
+}
+
+.description {
+    flex-grow: 2;
+    padding-block-end: 1.5ch;
 }
 
 .image {
