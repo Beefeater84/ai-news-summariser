@@ -25,7 +25,9 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"],
+      "@/*": [
+        "./app/*"
+      ],
       "@/router": [
         "./.react-router/*"
       ]
