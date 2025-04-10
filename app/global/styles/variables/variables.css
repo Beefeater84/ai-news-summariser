@@ -1,35 +1,35 @@
 :root {
+  --text-color: var(--gray-500);
 
-    --text-color: var(--white-100);
+  --primary-color: var(--blue-100);
+  --background-color: var(--grey-500);
 
-    --primary-color: var(--blue-100);
-    --background-color: var(--grey-500);
+  --text-color-dark: var(--black-100);
+  --border-color: var(--grey-300);
+  --highlight-color: var(--yellow-100);
+  --overlay-color: var(--grey-200);
 
-    --text-color-dark: var(--black-100);
-    --border-color: var(--grey-300);
-    --highlight-color: var(--yellow-100);
-    --overlay-color: var(--grey-200);
+  --base-font-size: var(--size-16px);
+  --nav-li-size: var(--size-16px);
 
-    --base-font-size: var(--size-16px);
-    --nav-li-size: var(--size-16px);
+  --article-background-color: var(--grey-500);
 
-    --article-background-color: var(--grey-500);
+  /* Sizes */
+  --nav-height: calc(var(--nav-li-size) * 3.5);
+  --block-border-buttom: inset 0 calc(var(--nav-li-size) * -0.0625) 0
+    var(--border-color);
 
+  --container-width: var(--size-1080px);
+  --inline-full-size: var(--size-100prs);
 
-    /* Sizes */
-    --nav-height: calc(var(--nav-li-size) * 3.5);
-    --block-border-buttom: inset 0 calc(var(--nav-li-size) * -0.0625) 0 var(--border-color);
+  /* Z-index */
+  /* Fonts */
 
+  --nanoSanse: "Noto Sans", system-ui, sans-serif;
 
-    --container-width: var(--size-1080px);
-    --inline-full-size: var(--size-100prs);
+  /* Sizes */
+  --article-list-gap: calc(var(--base-font-size) * 2);
+  --article-title: calc(var(--base-font-size) * 1.3);
 
-    /* Z-index */
-    /* Fonts */
-
-    --nanoSanse: "Noto Sans", system-ui, sans-serif;
-
-    /* Sizes */
-    --article-list-gap: calc(var(--base-font-size) * 2);
-    --article-title: calc(var(--base-font-size) * 1.3);
+  --article-paragraph-width: var(--font-weight-400);
 }

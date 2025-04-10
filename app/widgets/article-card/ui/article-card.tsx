@@ -1,10 +1,8 @@
-import type { IArticleCard } from "@/entities/article";
+import type { IArticleCard } from "@/entities/post";
 import styles from "./article-card.module.css";
 import { NavLink } from "react-router";
 
 export const ArticleCard = (props: IArticleCard) => {
-  console.log("ArticleCard", props);
-
   return (
     <article className={styles.article}>
       {/* <picture className={styles.image}>
@@ -13,7 +11,7 @@ export const ArticleCard = (props: IArticleCard) => {
             </picture> */}
       <div className={styles.content}>
         {/* <div>{props.tags?.[0]}</div> */}
-        <NavLink to={"article/" + props.id} className={styles.link}>
+        <NavLink to={"article/" + props.slug} className={styles.link}>
           <h2 className={styles.title}>{props.title}</h2>
         </NavLink>
 

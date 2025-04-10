@@ -1,77 +1,33 @@
 .header {
-    position: fixed;
-    height: var(--nav-height);
-    top: 0;
-    width: 100%;
-    left: 0;
-    overflow: clip;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-    justify-content: center;
-    padding-inline: 1rem;
+  position: fixed;
+  height: var(--nav-height);
+  top: 0;
+  width: 100%;
+  left: 0;
+  overflow: clip;
+  display: flex;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
 
-
-    background-color: var(--background-color);
-    box-shadow: var(--block-border-buttom);
-
-
-    /*:global(nav),*/
-    /*:global(div) {*/
-    /*    height: var(--nav-height);*/
-    /*}*/
-
-}
-
-.container {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 3rem 1rem max-content;
-    gap: 1rem;
-    /*align-content: center;*/
-    /*justify-content: center;*/
-    height: var(--nav-height);
-
-    width: var(--container-width);
-    max-width: 100%;
-
-}
-
-.logo {
-    /*height: var(--nav-height);*/
-    /*padding-inline-end: 1rem;*/
-}
-
-.mainMenu {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-overflow: ellipsis;
-    color: var(--text-color);
-    font-weight: 700;
-
-    :global(a) {
-        text-decoration: none;
-        transition: all 0.2s ease;
-        color: inherit;
-
-        &:hover {
-            color: var(--primary-color);
-        }
-
-        &:visited {
-        }
-
-
-    }
+  background-color: var(--background-color);
+  box-shadow: var(--block-border-buttom);
 }
 
 .separator {
-    height: calc(var(--base-font-size) * 1.625);
-    width: 2px;
-    background-color: var(--border-color);
-    /*margin-inline-start: var(--base-font-size);*/
+  height: calc(var(--base-font-size) * 1.625);
+  width: 2px;
+  background-color: var(--border-color);
+  /*margin-inline-start: var(--base-font-size);*/
+}
+
+.navbar {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: fit-content;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  max-block-size: 100%;
 }

@@ -1,33 +1,17 @@
 import styles from "./navbar.module.css";
-
-const pages = [
-  "News",
-  "Sport",
-  "Business",
-  "Politics",
-  "Opinion",
-  "Culture",
-  "Lifestyle",
-  "Tech",
-  "Travel",
-  "Search",
-];
+import { NavLink } from "react-router";
 
 export const Navbar = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.logo}>
-          Home
+      <div className="container">
+        <div className={styles.navbar}>
+          <NavLink to={"/"}>
+            <div className={styles.logo}>Home</div>
+          </NavLink>
+          <div className={styles.separator} />
+          <span>Website with YouTube transcripted videos</span>
         </div>
-        <span className={styles.separator}></span>
-        <nav className={styles.mainMenu}>
-          {pages.map((page) => (
-              <a key={page} href={`/${page.toLowerCase()}`}>
-                {page}
-              </a>
-          ))}
-        </nav>
       </div>
     </header>
   );
