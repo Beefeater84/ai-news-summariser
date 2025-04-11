@@ -13,12 +13,11 @@ import stylesheet from "@/global/styles/global.css?url";
 import { Navbar } from "@/widgets/navbar";
 
 async function enableMocking() {
-  // if (process.env.VITE_MODE !== 'development') {
-  //     return
-  // }
+  if (import.meta.env.VITE_MODE !== "development") {
+    return;
+  }
 
   const { worker } = await import("./mocks/browser.js");
-
   // `worker.start()` returns a Promise that resolves
   // once the Service Worker is up and ready to intercept requests.
   return await worker.start();
