@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import styles from "./article.module.css";
-import { use, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getPostById } from "@/entities/post/api/get-post-by-id";
 
 export function Article() {

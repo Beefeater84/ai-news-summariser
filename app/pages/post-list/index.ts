@@ -1,4 +1,4 @@
-import type { Route } from "@router/types/app/+types/root";
+import type { Route } from "@/router/+types/root";
 import { PostList } from "./ui/post-list";
 
 export function meta({}: Route.MetaArgs) {
