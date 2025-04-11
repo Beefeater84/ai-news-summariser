@@ -1,5 +1,6 @@
 .list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--article-list-gap);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--article-list-gap);
+  padding-block: var(--article-list-padding);
 }

@@ -30,6 +30,7 @@
   /* Sizes */
   --article-list-gap: calc(var(--base-font-size) * 2);
   --article-title: calc(var(--base-font-size) * 1.3);
+  --article-list-padding: calc(var(--base-font-size) * 2);
 
   --article-paragraph-width: var(--font-weight-400);
 }
