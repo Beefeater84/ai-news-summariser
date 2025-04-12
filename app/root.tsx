@@ -12,24 +12,28 @@ import type { Route } from "@/router/+types/root";
 import stylesheet from "@/global/styles/global.css?url";
 import { Navbar } from "@/widgets/navbar";
 
-// async function enableMocking() {
-//   if (import.meta.env.MODE === "development") {
-//     const { worker } = await import("./mocks/browser");
-//     await worker.start();
-//   }
+async function enableMocking() {
+  if (import.meta.env.MODE === "development") {
+    const { worker } = await import("./mocks/browser");
+    await worker.start();
+  }
 
-//   // if (import.meta.env.VITE_MODE !== "development") {
-//   //   return;
-//   // }
+  // if (import.meta.env.VITE_MODE !== "development") {
+  //   return;
+  // }
 
-//   // const { worker } = await import("./mocks/browser");
-//   // // `worker.start()` returns a Promise that resolves
-//   // // once the Service Worker is up and ready to intercept requests.
-//   // return await worker.start();
-// }
+  // const { worker } = await import("./mocks/browser");
+  // // `worker.start()` returns a Promise that resolves
+  // // once the Service Worker is up and ready to intercept requests.
+  // return await worker.start();
+}
 
 export async function clientLoader({ params }: Route.ClientLoaderArgs) {
-  // return await enableMocking();
+  return await enableMocking();
+}
+
+export function HydrateFallback() {
+  return <div>Loading...</div>;
 }
 
 export const links: Route.LinksFunction = () => [
