@@ -61,25 +61,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <QueryClientProvider client={queryClient}>
-        <body>
-          {children}
-          <ScrollRestoration />
-          <Scripts />
-        </body>
-      </QueryClientProvider>
+      <body>
+        {children}
+        <ScrollRestoration />
+        <Scripts />
+      </body>
     </html>
   );
 }
 
 export default function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Navbar />
       <main>
         <Outlet />
       </main>
-    </>
+    </QueryClientProvider>
   );
 }
 
