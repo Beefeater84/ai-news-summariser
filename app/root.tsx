@@ -68,26 +68,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
-  return (
-    <main>
-      <Outlet />
-    </main>
-  );
-}
-
 // export default function App() {
-//   const queryClient = new QueryClient();
-
 //   return (
-//     <QueryClientProvider client={queryClient}>
-//       <Navbar />
-//       <main>
-//         <Outlet />
-//       </main>
-//     </QueryClientProvider>
+//     <main>
+//       <Outlet />
+//     </main>
 //   );
 // }
+
+export default function App() {
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+    </QueryClientProvider>
+  );
+}
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
