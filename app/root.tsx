@@ -68,26 +68,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-// export default function App() {
-//   return (
-//     <main>
-//       <Outlet />
-//     </main>
-//   );
-// }
-
 export default function App() {
-  const queryClient = new QueryClient();
-
   return (
-    <QueryClientProvider client={queryClient}>
-      <Navbar />
-      <main>
-        <Outlet />
-      </main>
-    </QueryClientProvider>
+    <main>
+      <Outlet />
+    </main>
   );
 }
+
+// export default function App() {
+//   const queryClient = new QueryClient();
+
+//   return (
+//     <QueryClientProvider client={queryClient}>
+//       <Navbar />
+//       <main>
+//         <Outlet />
+//       </main>
+//     </QueryClientProvider>
+//   );
+// }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
@@ -98,7 +98,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     message = error.status === 404 ? "404" : "Error";
     details =
       error.status === 404
-        ? "The requested page could not be found. 1"
+        ? "The requested page could not be found."
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
